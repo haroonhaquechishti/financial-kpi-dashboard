@@ -11,7 +11,7 @@ Built with SQL, DAX, and Power BI. Every visual answers a specific business ques
 
 ---
 
-## What This Shows
+## Results at a Glance
 
 | KPI | Value | Insight |
 |---|---|---|
@@ -24,15 +24,15 @@ Built with SQL, DAX, and Power BI. Every visual answers a specific business ques
 
 ---
 
-## Visuals
+## Dashboard Visuals
 
-| Visual | Business Question Answered |
-|---|---|
-| Revenue by Department | Which department drives the most revenue? |
-| Budget vs Actuals | Who is over or under budget? |
-| Revenue Trend by Month | What is the revenue trajectory over time? |
-| Net Margin % by Department | Which departments are profitable? |
-| KPI Cards (4) | What are the top-line numbers right now? |
+| Visual | Type | Business Question Answered |
+|---|---|---|
+| KPI Cards (4) | Card | What are the top-line numbers right now? |
+| Revenue by Department | Horizontal Bar | Which department drives the most revenue? |
+| Budget vs Actuals | Clustered Column | Who is over or under budget? |
+| Revenue Trend by Month | Line Chart | What is the revenue trajectory over time? |
+| Net Margin % by Department | Column Chart | Which departments are profitable? |
 
 ---
 
@@ -52,18 +52,26 @@ Net Margin % = DIVIDE(
 
 ---
 
-## SQL — 16 Queries
+## SQL Queries — All 16
 
-Full queries in [`kpi_queries.sql`](kpi_queries.sql)
+Full file: [`kpi_queries.sql`](kpi_queries.sql)
 
-Key queries include:
-- Revenue by department and month with company share %
-- Expenses vs budget variance with Over/Under status label
-- YoY growth % and MoM growth % using LAG window functions
-- Net margin % with margin band classification (Healthy/Moderate/Thin/Negative)
-- Headcount efficiency — revenue, cost, and profit per employee
-- Rolling 3-month average revenue
-- Cumulative YTD revenue vs target gap
+1. Revenue by department and month with company share %
+2. Annual revenue summary by department
+3. Expenses vs budget variance with Over/Under status label
+4. YoY growth % using LAG window function
+5. MoM growth % using LAG window function
+6. Net margin % with margin band classification (Healthy/Moderate/Thin/Negative)
+7. Headcount efficiency — revenue, cost, and profit per employee
+8. Top 3 departments by profit margin (ranked)
+9. Bottom 3 departments by budget overspend (ranked)
+10. Rolling 3-month average revenue
+11. Rolling 3-month average net margin
+12. Cumulative YTD revenue vs YTD target gap
+13. Revenue vs target attainment with status labels (Exceeded/Met/Near Miss/Missed)
+14. Expense ratio trend with rolling average
+15. Company-wide monthly executive snapshot
+16. Department contribution % to total company revenue
 
 ---
 
@@ -72,10 +80,10 @@ Key queries include:
 | File | Description |
 |---|---|
 | [`financial_kpi_dashboard.pbix`](financial_kpi_dashboard.pbix) | Power BI file — open in Power BI Desktop |
-| [`financial_data.csv`](financial_data.csv) | Dataset — 24 months x 5 departments |
-| [`kpi_queries.sql`](kpi_queries.sql) | All 16 SQL queries |
-| [`dashboard_build_guide.md`](dashboard_build_guide.md) | Step by step build instructions |
-| [`dashboard_screenshot.png`](dashboard_screenshot.png) | Dashboard image |
+| [`financial_data.csv`](financial_data.csv) | Dataset — 24 months x 5 departments (120 rows) |
+| [`kpi_queries.sql`](kpi_queries.sql) | All 16 SQL transformation and analytics queries |
+| [`dashboard_build_guide.md`](dashboard_build_guide.md) | Step by step build instructions with DAX formulas |
+| [`dashboard_screenshot.png`](dashboard_screenshot.png) | Dashboard preview |
 
 ---
 
@@ -83,11 +91,11 @@ Key queries include:
 
 1. Download [`financial_kpi_dashboard.pbix`](financial_kpi_dashboard.pbix)
 2. Open in **Power BI Desktop** — free from [microsoft.com/power-bi](https://powerbi.microsoft.com/desktop)
-3. If data does not load: click **Transform data** and update the CSV file path
+3. If data does not load: click **Transform data** and update the CSV path to your local location
 4. All visuals and DAX measures render automatically
 
-**Tools:** `Power BI` `DAX` `SQL` `Window Functions`
-
 ---
+
+**Tools:** `Power BI` `DAX` `SQL` `Window Functions` `Financial Modeling`
 
 *[Haroon Haque Chishti](https://github.com/haroonhaquechishti) — Business & Data Analyst Portfolio*
