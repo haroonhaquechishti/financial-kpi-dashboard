@@ -104,11 +104,11 @@ Key queries in `kpi_queries.sql`:
 
 | File | Description |
 |---|---|
-| `financial_kpi_dashboard.pbix` | Power BI dashboard file (open in Power BI Desktop) |
-| `financial_data.csv` | Synthetic financial dataset (120 rows, 24 months x 5 depts) |
-| `kpi_queries.sql` | 16 SQL transformation and analytics queries |
-| `dashboard_build_guide.md` | Step by step build instructions |
-| `dashboard_screenshot.png` | Dashboard preview image |
+| [financial_kpi_dashboard.pbix](financial_kpi_dashboard.pbix) | Power BI dashboard file (open in Power BI Desktop) |
+| [financial_data.csv](financial_data.csv) | Synthetic financial dataset (120 rows, 24 months x 5 depts) |
+| [kpi_queries.sql](kpi_queries.sql) | 16 SQL transformation and analytics queries |
+| [dashboard_build_guide.md](dashboard_build_guide.md) | Step by step build instructions |
+| [dashboard_screenshot.png](dashboard_screenshot.png) | Dashboard preview image |
 
 ---
 
